@@ -1,0 +1,74 @@
+:root {
+    --k10-primary: #7c2d12;     
+    --k10-secondary: #d97706;   
+    --k10-accent: #f59e0b;     
+    --k10-dark: #1c1917;       
+    --k10-light: #fffbeb;      
+}
+
+body {
+    background-color: var(--k10-light);
+    color: var(--k10-dark);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+}
+
+.btn-warning {
+    background-color: var(--k10-secondary);
+    border-color: var(--k10-secondary);
+    color: #ffffff !important;
+    transition: transform 0.25s ease-in-out, background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-warning:hover {
+    transform: translateY(-3px);
+    background-color: #b45309;
+    border-color: #b45309;
+    box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
+}
+
+.navbar {
+    background-color: var(--k10-dark) !important;
+}
+
+.navbar-brand span {
+    color: var(--k10-accent);
+}
+
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(28, 25, 23, 0.1) !important;
+}
+
+.carousel-item img {
+    height: 320px;
+    object-fit: cover;
+}
+
+@media screen and (min-width: 641px) {
+    .hero-section h1 {
+        font-size: 2.75rem;
+    }
+    .carousel-item img {
+        height: 380px !important;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .hero-section h1 {
+        font-size: 3.5rem;
+    }
+    .carousel-item img {
+        height: 420px !important;
+    }
+}
