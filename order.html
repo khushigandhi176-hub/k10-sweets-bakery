@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Online & Price Estimator | K10 Sweets & Bakery</title>
+    
+    <meta name="description" content="Place your online order enquiry and calculate instant cost estimates and pickup times at K10 Sweets & Bakery.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm" role="navigation">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <svg class="me-2" width="36" height="36" viewBox="0 0 100 100" role="img" aria-label="K10 Logo">
+                    <circle cx="50" cy="50" r="45" fill="#d97706" />
+                    <text x="50" y="62" font-size="40" text-anchor="middle" fill="#ffffff" font-weight="bold">K10</text>
+                </svg>
+                <span class="fw-bold fs-4">K10 Sweets & Bakery</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#menu">Sweets Menu</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="order.html">Order Online & Estimator</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main role="main">
+        <section id="order" class="py-5 bg-light">
+            <div class="container py-4">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="card shadow-sm border-0 p-4 p-md-5">
+                            <h1 class="h2 fw-bold mb-3 text-center">Interactive Order Estimator & Enquiry</h1>
+                            <p class="text-muted text-center mb-4">Calculate instant cost estimates and estimated kitchen prep times before placing your order.</p>
+                            
+                            <form id="bakeryOrderForm" class="needs-validation" novalidate>
+                                <div class="row g-3 mb-3">
+                                    <div class="col-md-6">
+                                        <label for="custName" class="form-label fw-semibold">Full Name</label>
+                                        <input type="text" class="form-control" id="custName" required placeholder="Enter your name">
+                                        <div class="invalid-feedback">Please provide your name.</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="custPhone" class="form-label fw-semibold">Phone Number</label>
+                                        <input type="tel" class="form-control" id="custPhone" required placeholder="10-digit mobile number" pattern="[0-9]{10}">
+                                        <div class="invalid-feedback">Please provide a valid 10-digit mobile number.</div>
+                                    </div>
+                                </div>
+
+                                <div class="row g-3 mb-3">
+                                    <div class="col-md-6">
+                                        <label for="sweetType" class="form-label fw-semibold">Select Item</label>
+                                        <select class="form-select" id="sweetType" required>
+                                            <option value="assorted">Assorted Desi Ghee Sweets (₹400/box)</option>
+                                            <option value="kaju">Premium Kaju Katli (₹800/250g)</option>
+                                            <option value="cake">Chocolate Truffle Cake (₹550/half kg)</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="quantity" class="form-label fw-semibold">Quantity / Units</label>
+                                        <input type="number" class="form-control" id="quantity" min="1" value="1" required>
+                                        <div class="invalid-feedback">Enter a quantity of at least 1.</div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label for="deliveryDate" class="form-label fw-semibold">Desired Pickup / Delivery Date</label>
+                                    <input type="date" class="form-control" id="deliveryDate" required>
+                                    <div class="invalid-feedback">Please select a valid future date.</div>
+                                </div>
+
+                                <div id="estimateResult" class="alert alert-warning p-3 mb-4 fw-medium text-dark">
+                                    <strong>Estimated Cost:</strong> ₹400 | <strong>Est. Pickup Ready:</strong> 15 mins
+                                </div>
+
+                                <button type="submit" class="btn btn-warning w-100 py-3 fw-bold text-dark shadow-sm">Submit Order Enquiry</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" class="bg-dark text-white py-5" role="contentinfo">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h3 class="h5 fw-bold text-warning mb-3">K10 Sweets & Bakery</h3>
+                    <p class="text-white-50 small">Delivering sweetness and handcrafted joy to your doorstep since inception. Certified hygienic preparation and authentic flavors.</p>
+                </div>
+                <div class="col-lg-4">
+                    <h4 class="h6 fw-bold text-uppercase mb-3">Store Location</h4>
+                    <p class="text-white-50 small mb-1">Sector 43, Main Market Road</p>
+                    <p class="text-white-50 small mb-1">Phone: +91 98765 43210</p>
+                    <p class="text-white-50 small">Email: support@k10bakery.com</p>
+                </div>
+                <div class="col-lg-4">
+                    <h4 class="h6 fw-bold text-uppercase mb-3">Quick Links</h4>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="index.html" class="text-white-50 text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="index.html#menu" class="text-white-50 text-decoration-none">Sweets Menu</a></li>
+                        <li class="mb-2"><a href="order.html" class="text-white-50 text-decoration-none">Order Online</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="border-secondary my-4">
+            <div class="text-center text-white-50 small">
+                <p class="mb-0">&copy; 2026 K10 Sweets & Bakery. All rights reserved. Designed for Web Designing Assignment (Roll No. 10).</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
